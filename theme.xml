@@ -1,0 +1,280 @@
+<!--
+theme name:     Supreme Retro
+creator:		Dwayne Hurst 
+version         1.X
+Adaptado por José Adriano para uso em EmuELEC,créditos ao criado original do tema. troca e tamanho de fonte para melhor visualização, adicionando sistemas faltantes para emuelec.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+   <formatVersion>4</formatVersion>
+   <include>./_inc/icons/menuicons.xml</include>
+	<include>./_inc/menu/menu.xml</include>
+
+<!--
+Carousel wheel and main menu background
+-->
+
+
+<feature supported="carousel">
+   <view name="system">
+      <carousel name="systemcarousel">
+        <type>vertical</type>
+        <pos>0.0 -0.092</pos>
+        <logoAlignment>center</logoAlignment>         
+        <size>1 1.16</size>
+        <logoScale>1.1</logoScale>
+        <zIndex>3</zIndex>          
+        <logoSize>0.25 0.2</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>6</maxLogoCount>    
+      </carousel>
+      <image name="background" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>2</zIndex>                 
+         <path>./_inc/images/main_bottom.png</path>
+      </image>
+      <image name="background2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>4</zIndex>                 
+         <path>./_inc/images/main_top.png</path>
+      </image>                      
+      <text name="systemInfo">     
+         <pos>-0.11 0.85</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>000000</color>
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+	     <fontSize>0.028</fontSize>
+         <zIndex>5</zIndex>	     
+      </text>            
+   </view>
+</feature>
+
+
+<!--
+On Screen help
+-->
+
+   <view name="system">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.029</fontSize>     
+         <pos>0.21 0.96</pos>      
+         <textColor>000000</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>  
+
+   <view name="detailed,video">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.018</fontSize>     
+         <pos>0.015 0.965</pos>      
+         <textColor>000000</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view> 
+   <view name="basic">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.018</fontSize>     
+         <pos>0.26 0.96</pos>      
+         <textColor>000000</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>      
+   
+<!--
+System Gamelist
+--> 
+
+   <view name="detailed,video">
+      <textlist name="gamelist">      
+         <selectorColor>974f09</selectorColor>                     
+         <pos>0.38 0.177</pos>
+         <size>0.238 0.73</size>
+         <selectedColor>F9F900</selectedColor>
+         <primaryColor>ffffff</primaryColor>
+         <secondaryColor>ffffff</secondaryColor>
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.03</fontSize>
+         <forceUppercase>1</forceUppercase>
+         <scrollSound></scrollSound>
+         <alignment>left</alignment>
+         <zIndex>2</zIndex>                          
+      </textlist>
+   </view> 
+  
+   <view name="basic">
+      <textlist name="gamelist">      
+         <selectorColor>974f09</selectorColor>                     
+         <pos>0.33 0.277</pos>
+         <size>0.36 0.43</size>
+         <selectedColor>F9F900</selectedColor>
+         <primaryColor>ffffff</primaryColor>
+         <secondaryColor>ffffff</secondaryColor>
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.03</fontSize>
+         <forceUppercase>1</forceUppercase>
+         <scrollSound></scrollSound>
+         <alignment>left</alignment>
+         <zIndex>2</zIndex>                          
+      </textlist>
+   </view> 
+   
+   
+<!--
+System View Backgrounds
+-->  
+   
+   <view name="basic,video,detailed">
+      <image name="background" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/main_bottom.png</path>
+         <zIndex>1</zIndex>          
+      </image>                
+   </view>   
+   
+   <view name="basic">
+      <image name="background2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/system_basic.png</path>
+         <zIndex>3</zIndex>          
+      </image>                
+   </view> 
+    
+   <view name="detailed,video">
+      <image name="background2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/system_video.png</path>
+         <zIndex>3</zIndex>         
+      </image>                
+   </view>     
+    
+<!--
+Metadata, description, rating etc
+-->      
+    
+
+   <view name="video,detailed">   
+      <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>F9F900</color>
+         <fontPath>./_inc/fonts/OPENSANS-LIGHT</fontPath>
+         <fontSize>0.025</fontSize>
+      </text>
+      <text name="md_lbl_rating">
+         <pos>0.03 0.6</pos>
+         <size>0.0625 0.08</size>
+         <color>ffffff</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <rating name="md_rating">
+         <zIndex>5</zIndex>       
+         <pos>0.09 0.619</pos>
+         <size>0.04 0.04</size>
+         <filledPath>./_inc/images/star_filled.png</filledPath>
+         <unfilledPath>./_inc/images/star_empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.03 0.5</pos>
+         <size>0.2 0.035</size>
+         <color>ffffff</color>
+         <zIndex>5</zIndex>                  
+      </text>
+      <text name="md_players">
+         <pos>0.09 0.5</pos>
+         <size>0.2 0.035</size>
+         <color>F9F900</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_releasedate">
+         <pos>0.15 0.5</pos>
+         <size>0.2 0.035</size>
+         <color>ffffff</color>
+         <zIndex>5</zIndex>                  
+      </text>
+      <datetime name="md_releasedate">
+         <pos>0.2205 0.5</pos>
+         <size>0.2 0.035</size>
+         <color>F9F900</color>         
+         <zIndex>5</zIndex>         
+      </datetime>
+      <text name="md_lbl_genre">
+         <pos>0.03 0.54</pos>
+         <size>0.2 0.035</size>
+         <color>ffffff</color>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_genre">
+         <pos>0.09 0.54</pos>
+         <size>0.14 0.035</size>
+         <color>F9F900</color>         
+         <zIndex>5</zIndex>         
+      </text>         
+      <text name="md_lbl_playcount">
+         <pos>0.03 0.58</pos>
+         <size>0.2 0.035</size>
+         <color>ffffff</color>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_playcount">
+         <pos>0.14 0.58</pos>
+         <size>0.2 0.035</size>
+         <color>F9F900</color>         
+         <zIndex>5</zIndex>         
+      </text>       
+      <text name="md_description">
+         <fontSize>0.02</fontSize>      
+         <color>974f09</color>      
+         <pos>0.03 0.696</pos>
+         <size>0.32 0.232</size>
+         <zIndex>5</zIndex>         
+      </text>
+   </view>
+
+  
+
+<!--
+Images, boxart, snaps, wheel art etc
+--> 
+
+
+   <view name="detailed">
+      <image name="md_image">
+         <pos>0.155 0.23</pos>
+         <maxSize>0.22 0.24</maxSize>
+         <zIndex>3</zIndex>         
+      </image>           
+   </view>
+
+   <view name="video">   
+      <video name="md_video">
+         <pos>0.155 0.22</pos>
+         <maxSize>0.264 0.308</maxSize>
+         <zIndex>3</zIndex>
+         <delay>1.0</delay>         
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay>true</showSnapshotDelay>                  
+      </video>     
+      <image name="md_marquee">
+         <pos>0.16 0.052</pos>
+         <origin>0.5 0.5</origin>
+         <maxSize>0.12 0.08</maxSize>
+         <zIndex>4</zIndex>         
+      </image>             
+   </view>
+   
+</theme>
